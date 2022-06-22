@@ -1,0 +1,19 @@
+
+
+# $ mkdir graphql
+# $ touch ./graphql/schema.graphql
+# /graphql/schema.graphql
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+type Query {
+  user(id: ID! @eq): User @find
+  users: [User!]! @all
+}
+# type Task = {
+#     id: ID!
+#     name: String
+# }
